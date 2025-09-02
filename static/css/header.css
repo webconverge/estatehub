@@ -1,0 +1,86 @@
+
+
+/* 
+
+    header
+
+*/
+
+/* base classes */
+.header{
+    display:grid;
+    grid-template-columns:subgrid;
+    grid-column:1/-1;
+    background-color:var(--eggplant);
+}
+
+.header-inner-wrapper{
+    grid-column:3/15;
+    display:flex;
+    gap:40px;
+    align-items:center;
+    position:relative;
+}
+
+.header-brand{
+    font-size:1.7rem;
+    font-weight:bold;
+}
+
+.header-menu-wrapper{
+    display:contents;
+}
+
+.header-menu-btn{
+    display:none;
+    font-size:1.1rem;
+    color:var(--jungle-green);
+    cursor:pointer;
+}
+
+.header-menu{
+    display:flex;
+    gap:20px;
+}
+
+.header-menu-item{
+    font-size:1.1rem;
+}
+
+/* classes on event */
+.header-menu-wrapper-mobile{
+    display:flex;
+    flex-direction:column;
+    position:absolute;
+    top:50px;
+    background-color:var(--black-bean);
+    width:100%;
+    padding:10px;
+}
+
+.header-menu-mobile{
+    flex-direction:column;
+    overflow:hidden;
+    max-height:0;
+    transition:max-height 0.5s;
+}
+
+.header-menu-mobile-opened{
+    /* overflow:auto; */
+    max-height:500px;
+}
+
+.header-menu-btn-mobile{
+    display:initial;
+    align-self:end;
+}
+
+.header-menu-item-mobile{
+    align-self:center;
+}
+
+.header-menu-item:hover{
+    color:var(--jungle-green);
+}
+
+
