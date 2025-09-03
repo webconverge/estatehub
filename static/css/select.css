@@ -8,9 +8,56 @@
 */
 
 /* base classes */
+.select{
+    display:flex;
+    position:relative;
+    /* z-index:1; */
+}
 
+.select-header{
+    display:flex;
+    justify-content:space-between;
+    padding:10px;
+    flex-grow:1;
+    cursor:pointer;
+    border:1px solid var(--tiffany-blue);
+    align-items:center;
+}
 
+.select-icon{
+    transition:transform 0.2s;
+}
+
+.select-menu{
+    display:flex;
+    position:absolute;
+    top:calc(100% + 5px);
+    left:0;
+    flex-direction:column;
+    width:100%;
+    max-height:0;
+    overflow:hidden;
+    transition:max-height 0.2s;
+    z-index:1;
+}
+
+.select-menu-item{
+    padding:10px;
+    background-color:var(--eggplant);
+    cursor:pointer;
+}
 
 /* classes on event */
+.select-menu-item:hover{
+    background-color:var(--tiffany-blue);
+    font-weight:bold;
+}
 
+.select-menu-opened{
+    max-height:500px;
+}
+
+.select-icon-menu-opened{
+    transform:rotate(180deg);
+}
 

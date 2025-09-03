@@ -1,0 +1,56 @@
+
+
+/*
+
+    --search--
+
+*/
+
+@import url("./select.css");
+
+/* base classes */
+.search{
+    padding-block:40px;
+    grid-column:1/-1;
+    grid-template-columns:subgrid;
+    display:grid;
+    background-color:white;
+    z-index:2;
+}
+
+.search-inner-wrapper{
+    grid-column:2/16;
+    gap:20px;
+    display:grid;
+    grid-template-columns: 2fr repeat(4, 1fr);
+}
+
+.search-input{
+    padding:10px;
+}
+
+.search-btn{
+    padding:10px;
+    background-color:var(--emerald);
+    color:var(--black-bean-2);
+    font-size:1.2rem;
+}
+
+/* classes on event */
+.search-inner-wrapper-medium{
+    grid-template-columns:2fr repeat(3, 1fr);
+}
+
+.search-inner-wrapper-small{
+    grid-template-columns:repeat(2, 1fr);
+}
+
+.search-input-small{
+    grid-column:1/-1;
+}
+
+.search-btn-small{
+    grid-column:1/-1;
+}
+
+

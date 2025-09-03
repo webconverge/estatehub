@@ -5,6 +5,10 @@
 
 @import url("./header.css");
 
+@import url("./search.css");
+
+@import url("./hero.css");
+
 
 :root{
     --non-photo-blue: #a3e7fcff;
@@ -47,6 +51,7 @@ body{
     display:grid;
     grid-template-columns:subgrid;
     grid-column:1/-1;
+    grid-auto-rows:max-content;
 }
 
 
