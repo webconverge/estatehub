@@ -58,6 +58,10 @@ body{
     grid-auto-rows:max-content;
 }
 
+.header-style{
+    color:var(--jungle-green);
+}
+
 
 
 

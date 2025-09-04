@@ -14,6 +14,10 @@ import property from "./property.js"
 
 import service from "./service.js"
 
+import jumpToSection from "./jump_to_section.js"
+
+import sectionTracker from "./section_tracker.js"
+
 
 header()
 
@@ -47,7 +51,63 @@ const parallaxData = [
 
 parallax(parallaxData)
 
+const hdSectData = [
+    {
+        header:document.querySelector(".header-menu-item:first-child"),
+
+        section:document.querySelector(".hero")
+    },
+
+    {
+        header:document.querySelector(".header-menu-item:nth-child(2)"),
+
+        section:document.querySelector(".properties")
+    },
+
+    {
+        header:document.querySelector(".header-menu-item:nth-child(3)"),
+
+        section:document.querySelector(".services")
+    },
+
+    {
+        header:document.querySelector(".hero-action"),
+
+        section:document.querySelector(".properties")
+    },
+
+    {
+        header:document.querySelector(".header-brand"),
+
+        section:document.querySelector(".hero")
+    }
+
+]
+
+jumpToSection(hdSectData, 70)
 
 
+const navData = [
 
+    {
+        header:document.querySelector(".header-menu-item:first-child"),
+
+        section:document.querySelector(".hero")
+    },
+
+    {
+        header:document.querySelector(".header-menu-item:nth-child(2)"),
+
+        section:document.querySelector(".properties")
+    },
+
+    {
+        header:document.querySelector(".header-menu-item:nth-child(3)"),
+
+        section:document.querySelector(".services")
+    },
+
+]
+
+sectionTracker(navData, 70)
 
