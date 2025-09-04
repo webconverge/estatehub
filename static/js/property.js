@@ -2,48 +2,48 @@
 
 /*
 
-    --slider--
+    --properties--
 
 */
 
-export default function slider(ref){
+export default function property(){
 
-    const slides = ref.querySelectorAll(".slide")
+    const properties = document.querySelectorAll(".property")
 
-    const slideNext = ref.querySelector(".slide-next")
+    const nextSlide = document.querySelector(".next")
     
-    const slidePrev = ref.querySelector(".slide-prev")
+    const prevSlide = document.querySelector(".prev")
 
     let ratio = 3
 
     function next(){
 
         // <-
-        slides.forEach(slide => {
+        properties.forEach(property => {
           
-            const pos = +slide.style.left.split("%")[0]
+            const pos = +property.style.left.split("%")[0]
 
-            slide.style.left = pos - (100 / ratio) + "%"
+            property.style.left = pos - (100 / ratio) + "%"
 
         })
 
-        for(let i=0; i<slides.length; i++){
+        for(let i=0; i<properties.length; i++){
 
-            const farLeftPos = +slides[i].style.left.split("%")[0]
+            const farLeftPos = +properties[i].style.left.split("%")[0]
 
             if(farLeftPos < 0){
 
                 // wait for slides to settle
                 setTimeout(()=>{
 
-                    slides[i].style.transition = ""
+                    properties[i].style.transition = ""
 
-                    slides[i].style.left = (slides.length - 1) * 100 / ratio + "%"
+                    properties[i].style.left = (properties.length - 1) * 100 / ratio + "%"
 
                     // wait for the slide to settle
                     setTimeout(()=>{
 
-                        slides[i].style.transition = "left 0.5s"
+                        properties[i].style.transition = "left 0.5s"
 
                     }, 100)
 
@@ -62,19 +62,19 @@ export default function slider(ref){
 
         let farRightPos
 
-        for(let i=0; i<slides.length; i++){
+        for(let i=0; i<properties.length; i++){
 
-            const temp = +slides[i].style.left.split("%")[0]
+            const temp = +properties[i].style.left.split("%")[0]
 
             if(!farRightPos){
 
-                farRightSlide = slides[i]
+                farRightSlide = properties[i]
 
                 farRightPos = temp
             }
             else if(temp > farRightPos){
 
-                farRightSlide = slides[i]
+                farRightSlide = properties[i]
 
                 farRightPos = temp
             }
@@ -90,11 +90,11 @@ export default function slider(ref){
 
             farRightSlide.style.transition = "left 0.5s"
 
-            slides.forEach(slide => {
+            properties.forEach(property => {
 
-                const pos = +slide.style.left.split("%")[0]
+                const pos = +property.style.left.split("%")[0]
 
-                slide.style.left = pos + (100 / ratio) + "%"
+                property.style.left = pos + (100 / ratio) + "%"
             })
 
         }, 100)
@@ -103,25 +103,25 @@ export default function slider(ref){
 
     function init(){
 
-        slides.forEach((slide, index) => {
+        properties.forEach((property, index) => {
     
-            slide.style.left = index * 100 / ratio + "%"
+            property.style.left = index * 100 / ratio + "%"
     
-            slide.style.transition = "left 0.5s"
+            property.style.transition = "left 0.5s"
     
-            slide.style.width = 100 / ratio + "%"
+            property.style.width = 100 / ratio + "%"
     
         })
     }
 
 
-    slideNext.addEventListener("click", () => {
+    nextSlide.addEventListener("click", () => {
 
         next()
 
     })
 
-    slidePrev.addEventListener("click", () => {
+    prevSlide.addEventListener("click", () => {
 
         prev()
 

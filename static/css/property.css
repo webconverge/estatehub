@@ -6,8 +6,6 @@
 
 */
 
-@import url("./slider.css");
-
 /* base classes */
 .properties{
     display:grid;
@@ -34,6 +32,8 @@
 .property-list{
     grid-column:2/16;
     height:300px;
+    position:relative;
+    overflow:hidden;
 }
 
 .property-img-wrapper{
@@ -54,6 +54,9 @@
     height:100%;
     padding-inline:20px;
     box-sizing:border-box;
+    position:absolute;
+    top:0;
+    height:100%;
 }
 
 .property-detail{
@@ -81,6 +84,22 @@
     font-weight:bold;
     font-size:1.1rem;
     color:var(--emerald);
+}
+
+.prev{
+    position:absolute;
+    top:50%;
+    left:0;
+    font-size:1.5rem;
+    cursor:pointer;
+}
+
+.next{
+    position:absolute;
+    top:50%;
+    right:0;
+    font-size:1.5rem;
+    cursor:pointer;
 }
 
 

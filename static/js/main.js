@@ -10,7 +10,7 @@ import search from "./search.js"
 
 import parallax from "./parallax.js"
 
-import slider from "./slider.js"
+import property from "./property.js"
 
 import service from "./service.js"
 
@@ -26,10 +26,7 @@ document.querySelectorAll(".select").forEach(item => {
 
 search()
 
-document.querySelectorAll(".slider").forEach(item => {
-
-    slider(item)
-})
+property()
 
 service()
 
