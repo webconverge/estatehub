@@ -8,7 +8,12 @@ import select from "./select.js"
 
 import search from "./search.js"
 
-import hero from "./hero.js"
+import parallax from "./parallax.js"
+
+import slider from "./slider.js"
+
+import service from "./service.js"
+
 
 header()
 
@@ -21,5 +26,31 @@ document.querySelectorAll(".select").forEach(item => {
 
 search()
 
-hero()
+document.querySelectorAll(".slider").forEach(item => {
+
+    slider(item)
+})
+
+service()
+
+
+const parallaxData = [
+    {
+        image:document.querySelector(".hero-bg"),
+
+        wrapper:document.querySelector(".hero")
+    },
+
+    {
+        image:document.querySelector(".services-bg"),
+
+        wrapper:document.querySelector(".services")
+    }
+]
+
+parallax(parallaxData)
+
+
+
+
 

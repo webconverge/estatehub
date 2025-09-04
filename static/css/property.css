@@ -1,0 +1,87 @@
+
+
+/*
+
+    --properties--
+
+*/
+
+@import url("./slider.css");
+
+/* base classes */
+.properties{
+    display:grid;
+    grid-template-columns:subgrid;
+    grid-column:1/-1;
+    row-gap:20px;
+    padding-block:40px;
+    background-color:white;
+}
+
+.properties-title{
+    font-size:1.3rem;
+    font-weight:bold;
+    grid-column:4/14;
+    text-align:center;
+}
+
+.properties-intro{
+    grid-column:4/14;
+    line-height:1.6;
+    text-align:center;
+}
+
+.property-list{
+    grid-column:2/16;
+    height:300px;
+}
+
+.property-img-wrapper{
+    position:relative;
+    height:45%;
+}
+
+.property-img{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.property{
+    height:100%;
+    padding-inline:20px;
+    box-sizing:border-box;
+}
+
+.property-detail{
+    height:55%;
+    display:flex;
+    flex-direction:column;
+    gap:5px;
+    justify-content:center;
+    padding-inline:20px;
+    background-color:var(--non-photo-blue);
+}
+
+.property-desc{
+    line-height:1.6;
+    font-size:0.8rem;
+}
+
+.property-price{
+    font-weight:bold;
+    font-size:1.2rem;
+    color:var(--black-bean);
+}
+
+.property-type{
+    font-weight:bold;
+    font-size:1.1rem;
+    color:var(--emerald);
+}
+
+
+

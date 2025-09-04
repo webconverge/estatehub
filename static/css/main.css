@@ -9,6 +9,10 @@
 
 @import url("./hero.css");
 
+@import url("./property.css");
+
+@import url("./service.css");
+
 
 :root{
     --non-photo-blue: #a3e7fcff;
